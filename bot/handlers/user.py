@@ -28,7 +28,11 @@ async def location_handler(message: Message, weather_service: WeatherService, us
 
     user: UserDTO = await user_service.get_or_create_user(message.from_user.id)
 
-    weather = await weather_service.get_weather_for_user(lat, lon, user, user_service)
+    try:
+        weather = await weather_service.get_weather_for_user(lat, lon, user, user_service)
+    except ValueError as e:
+        await message.answer(str(e))
+        return
 
     text = message_service.get('ru.json', 'weather').format(temperature=weather.current_weather.temperature,
                                                             windspeed=weather.current_weather.windspeed,
