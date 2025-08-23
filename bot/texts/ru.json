@@ -1,0 +1,10 @@
+{
+  "start": "<b>Привет, {username}!</b>\n\n☁️ Это бот для получения погоды в разных городах\n\n<i>Для получения погоды отправь мне <b>геометку</b></i>",
+  "weather": "<b>Погода в этой точке:</b>\n\nТемпература: {temperature}°C\nСкорость ветра: {windspeed} м/c\nКод погодного состояния: {weathercode}",
+  "balance": "Ваш id: {user_id}\n\nВаш баланс: <b>{balance}</b> ₽",
+  "payment_amount_input": "Введите сумму пополнения:",
+  "payment_amount_error": "Неверная сумма пополнения. Попробуйте еще раз",
+  "successful_payment": "Баланс успешно пополнен на {amount} ₽!",
+  "cancel": "Все действия отменены",
+  "admin_get_user": "user_id: {id}\nusername: {username}\nbalance: {balance}"
+}
